@@ -54,8 +54,13 @@ pub fn normalize_query(mut url: Url) -> Url {
 		}
 	).collect();
 	url.query_pairs_mut().clear();
+	let mut has_query_pairs = false;
 	for pair in query_pairs.iter().rev() {
 		url.query_pairs_mut().append_pair(&pair.key, &pair.value);
+		has_query_pairs = true
+	}
+	if !has_query_pairs {
+		url.set_query(None);
 	}
 	return url;
 }
