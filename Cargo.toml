@@ -1,6 +1,6 @@
 [package]
 name = "url-normalizer"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Mikhail Svetov <svmk-work@yandex.ru>"]
 
 description = "URL normalization"
@@ -11,4 +11,4 @@ readme="README.md"
 license = "MIT"
 
 [dependencies]
-url = "1.7"
+url = "2.0"
